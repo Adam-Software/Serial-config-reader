@@ -6,7 +6,7 @@ from serial_config_reader.JsonParser import JsonParser
 class JsonParserTest(unittest.TestCase):
 
     def test_something(self):
-        motors = JsonParser.ParseConfig('serial_config_reader/examples/position_range.json')
+        motors = JsonParser.ParseConfig('examples_config/position_range.json')
         print(motors)
 
 
