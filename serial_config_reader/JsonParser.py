@@ -1,5 +1,5 @@
 import json
-from typing import List
+from typing import List, Dict
 
 from serial_config_reader.Models.Joint import Joint
 from serial_config_reader.Models.Motor import Motor
@@ -16,7 +16,7 @@ class JsonParser:
         return data
 
     @staticmethod
-    def ParseConfig(path: str) -> List[Motor]:
+    def _ParseConfig(path: str) -> List[Motor]:
         config = JsonParser._ReadConfig(f'{path}')
         motors = []
         for element in config:
@@ -26,3 +26,13 @@ class JsonParser:
                                             element['joint']['speed'],
                                             element['joint']['id'])))
         return motors
+
+    @staticmethod
+    def GetParam(path: str) -> Dict[str, Motor]:
+        motors = JsonParser._ParseConfig(f'{path}')
+        name2Motor = {}
+
+        for motor in motors:
+            name2Motor[motor.name] = motor
+
+        return name2Motor
