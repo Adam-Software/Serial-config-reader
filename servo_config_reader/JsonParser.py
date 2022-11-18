@@ -1,8 +1,8 @@
 import json
 from typing import List, Dict
 
-from serial_config_reader.Models.Joint import Joint
-from serial_config_reader.Models.Motor import Motor
+from servo_config_reader.Models.Joint import Joint
+from servo_config_reader.Models.Motor import Motor
 
 
 class JsonParser:

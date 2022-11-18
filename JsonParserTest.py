@@ -1,6 +1,6 @@
 import unittest
 
-from serial_config_reader.JsonParser import JsonParser
+from servo_config_reader.JsonParser import JsonParser
 
 
 class JsonParserTest(unittest.TestCase):

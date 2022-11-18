@@ -1,4 +1,4 @@
-from serial_config_reader.Models.Joint import Joint
+from servo_config_reader.Models.Joint import Joint
 
 
 class Motor:
