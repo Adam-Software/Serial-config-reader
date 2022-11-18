@@ -9,6 +9,7 @@ class JsonParser:
 
     @staticmethod
     def _ReadConfig(path: str):
+        # TODO check path exist
         f = open(f'{path}')
         data = json.load(f)
         f.close()
